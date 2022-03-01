@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>PDF Result Template</title>
+  <style>
+    h1 {
+      color: red;
+      border: 2px solid blue;
+      border-radius: 10px;
+      font-size: 22px;
+      padding: 5px;
+    }
+
+    .cuerpo {
+      border: 2px solid blue;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    table.blueTable {
+      border: 1px solid #1C6EA4;
+      background-color: #EEEEEE;
+      width: 100%;
+      text-align: left;
+      border-collapse: collapse;
+    }
+
+    table.blueTable td,
+    table.blueTable th {
+      border: 1px solid #AAAAAA;
+      padding: 3px 2px;
+    }
+
+    table.blueTable tbody td {
+      font-size: 13px;
+    }
+
+    table.blueTable tr:nth-child(even) {
+      background: #D0E4F5;
+    }
+
+    table.blueTable thead {
+      background: #1C6EA4;
+      background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+      border-bottom: 2px solid #444444;
+    }
+
+    table.blueTable thead th {
+      font-size: 15px;
+      font-weight: bold;
+      color: #FFFFFF;
+      border-left: 2px solid #D0E4F5;
+    }
+
+    table.blueTable thead th:first-child {
+      border-left: none;
+    }
+
+    table.blueTable tfoot td {
+      font-size: 14px;
+    }
+
+    table.blueTable tfoot .links {
+      text-align: right;
+    }
+
+    table.blueTable tfoot .links a {
+      display: inline-block;
+      background: #1C6EA4;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pageHeader" style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+    <p>Anartz - Ejemplo de cabecera en HTML PDF</p>
+  </div>
+
+  <div class="cuerpo">
+    <h1>Título en el PDF creado con el paquete html-pdf</h1>
+    <p>Generando un PDF con un HTML sencillo</p>
+    <textarea> dato de prueba nuevo</textarea>
+    <table class="blueTable">
+      <thead>
+        <tr>
+          <th>head1</th>
+          <th>head2</th>
+          <th>head3</th>
+          <th>head4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>cell1_1</td>
+          <td>cell2_1</td>
+          <td>cell3_1</td>
+          <td>cell4_1</td>
+        </tr>
+        <tr>
+          <td>cell1_2</td>
+          <td>cell2_2</td>
+          <td>cell3_2</td>
+          <td>cell4_2</td>
+        </tr>
+        <tr>
+          <td>cell1_3</td>
+          <td>cell2_3</td>
+          <td>cell3_3</td>
+          <td>cell4_3</td>
+        </tr>
+        <tr>
+          <td>cell1_4</td>
+          <td>cell2_4</td>
+          <td>cell3_4</td>
+          <td>cell4_4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="pageFooter" style="border-top: 1px solid #ddd; padding-top: 5px;">
+    <p
+      style="color: #666; width: 70%; margin: 0; padding-bottom: 5px; text-align: let; font-family: sans-serif; font-size: .65em; float: left;">
+      <a href="https://anartz-mugika.com" target="_blank">https://anartz-mugika.com</a>
+    </p>
+    <p
+      style="color: #666; margin: 0; padding-bottom: 5px; text-align: right; font-family: sans-serif; font-size: .65em">
+      Página {{page}} de {{pages}}</p>
+  </div>
+</body>
+
+</html>
