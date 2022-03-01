@@ -53,7 +53,7 @@ app.post('/pdf', (require, response) => {
       response.json({
         valid: 'ok',
         file_name: filename,
-        url: res.filename
+        url: path.join(__dirname, 'public/' + res.filename)
       });
   });
 })
